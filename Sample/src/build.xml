@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="delete">
+<property name="files" value="Read me first"/>
+<property environment="env"/>
+<target name="init" >
+<mkdir dir="d:/Hello-world"/>
+</target>
+<target name="File">
+<echo file ="d:/Hello-world/Readme.txt">${files}</echo>
+</target>
+<target name="print">
+<echo>
+${env.JAVA_HOME}</echo>
+</target>
+<target name="init2">
+<mkdir dir="d:/Destination"/>
+</target>
+<target name="copy">
+ <copy file="d:/Readme.txt" todir="d:/Destination"/>
+ </target>
+ <target name="delete">
+ <delete file="d:/Hello-world/Readme.txt"></delete>
+ </target>
+</project>

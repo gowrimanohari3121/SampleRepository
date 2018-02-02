@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="war files" basedir="D:\gowri\TASK 2">
+	<target name="web">
+		<war destfile="myapp.war" needxmlfile="false">
+			<fileset dir="D:\gowri\SampleWeb\WebContent"></fileset>
+		</war>
+	</target>
+	<target name="copy">
+		<copy file="D:\gowri\TASK 2\myapp.war"
+			tofile="C:\Users\670312\Downloads\apache-tomcat-8.5.24-windows-x64\apache-tomcat-8.5.24\webapps\myapp.war" />
+	</target>
+	
+
+</project>

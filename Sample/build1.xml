@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jar files" default="run" basedir="D:\gowri\TASK 2">
+<target name ="jar">
+<javac srcdir="D:\gowri\Sample\src\source" destdir="D:\gowri\TASK 2" fork="true"/>
+</target>
+ <target name="jar1">
+<jar destfile="D:\gowri\jar\app.jar" basedir="D:\gowri\TASK 2">
+ 	<manifest>
+ 	      <attribute name="Main-Class"
+ 	            value="Add"/>
+ 	    </manifest>
+</jar>
+</target>
+<target name="copy">
+<copy file="D:\gowri\jar\app.jar" todir="d:/Destination"/>
+</target>
+<target name="run" depends="jar,jar1,copy">
+<java jar="D:\Destination\app.jar" fork="true"
+/> 
+</target>
+</project>
